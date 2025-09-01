@@ -8,7 +8,12 @@ const Button = () => {
         <div className="toggle">
           <input type="checkbox" />
           <span className="button" />
-          <span className="label">☼</span>
+          <span className="label" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/>
+            </svg>
+          </span>
         </div>
       </div>
     </StyledWrapper>
