@@ -73,7 +73,7 @@ const StyledWrapper = styled.div`
     opacity: 0.9;
     height: 100%;
     width: 100%;
-    color: rgba(0, 0, 0, 0.9);
+    color: rgba(0, 0, 0, 0.9); /* keep icon black */
   }
 
   .toggle input {
