@@ -30,11 +30,11 @@ const StyledWrapper = styled.div`
     content: "";
     box-shadow: 0;
     border-radius: 40px;
-    background: #ffffff;
+    background: transparent; /* remove any background behind the icon */
     position: absolute;
     margin-left: -18px;
     margin-top: -18px;
-    opacity: 0.25;
+    opacity: 0; /* fully transparent */
     height: 36px;
     width: 36px;
     left: 50%;
