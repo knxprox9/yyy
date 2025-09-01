@@ -112,7 +112,7 @@ const StyledWrapper = styled.div`
     left: 20px;
     bottom: -20px;
     z-index: 4;
-    transform: scale(0.52);
+    transform: scale(0.55);
     transform-origin: left bottom;
   }
 
