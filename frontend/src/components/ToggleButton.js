@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Button = ({ checked = false, onChange, onClick, shrink = false }) => {
+const Button = () => {
   return (
     <StyledWrapper>
       <div className="container">
-        <div className={`toggle ${shrink ? 'shrinking' : ''}`}>
-          <input type="checkbox" checked={checked} onChange={onChange} onClick={onClick} aria-label="toggle-indicator" />
+        <div className="toggle">
+          <input type="checkbox" />
           <span className="button" />
           <span className="label">☼</span>
         </div>
@@ -22,58 +22,55 @@ const StyledWrapper = styled.div`
 
   .toggle {
     position: relative;
-    height: 40px;
-    width: 40px;
+    height: 100px;
+    width: 100px;
   }
 
   .toggle:before {
-    content: "";
     box-shadow: 0;
-    border-radius: 40px;
-    background: #ffffff;
+    border-radius: 84.5px;
+    background: #fff;
     position: absolute;
-    margin-left: -18px;
-    margin-top: -18px;
-    opacity: 0.25;
-    height: 36px;
-    width: 36px;
+    margin-left: -36px;
+    margin-top: -36px;
+    opacity: 0.2;
+    height: 72px;
+    width: 72px;
     left: 50%;
     top: 50%;
   }
 
-  .toggle input:checked~.label {
-    color: rgba(0, 0, 0, 0.9);
+  .toogle input:checked~.label {
+    color: rgba(255,0,0,0.8);
   }
 
   .toggle .button {
-    transition: all 220ms cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: 0 8px 14px -4px rgba(0, 0, 0, 0.4), inset 0 -2px 3px -1px rgba(0, 0, 0, 0.2), 0 -6px 10px -1px rgba(255, 255, 255, 0.6), inset 0 2px 3px -1px rgba(255, 255, 255, 0.2);
-    border-radius: 28px;
+    transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 0 15px 25px -4px rgba(0, 0, 0, 0.5), inset 0 -3px 4px -1px rgba(0, 0, 0, 0.2), 0 -10px 15px -1px rgba(255, 255, 255, 0.6), inset 0 3px 4px -1px rgba(255, 255, 255, 0.2), inset 0 0 5px 1px rgba(255, 255, 255, 0.8), inset 0 20px 30px 0 rgba(255, 255, 255, 0.2);
+    border-radius: 68.8px;
     position: absolute;
-    background: #ffffff;
-    border: 1px solid #e5e7eb;
-    margin-left: -20px;
-    margin-top: -20px;
+    background: #eaeaea;
+    margin-left: -34.4px;
+    margin-top: -34.4px;
     display: block;
-    height: 40px;
-    width: 40px;
+    height: 68.8px;
+    width: 68.8px;
     left: 50%;
     top: 50%;
-    transform: scale(1); /* بارز افتراضياً */
   }
 
   .toggle .label {
     transition: color 300ms ease-out;
-    line-height: 40px;
+    line-height: 101px;
     text-align: center;
     position: absolute;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 28px;
     display: block;
     opacity: 0.9;
     height: 100%;
     width: 100%;
-    color: rgba(0, 0, 0, 0.9); /* keep icon black */
+    color: rgba(0, 0, 0, 0.9);
   }
 
   .toggle input {
@@ -84,9 +81,6 @@ const StyledWrapper = styled.div`
     height: 100%;
     width: 100%;
     left: 0;
-  /* نمط تقليص يُستخدم لحالات خاصة إن أردنا إجبار التصغير برمجياً */
-  .toggle.shrinking .button { transform: scale(0.92); }
-
     top: 0;
   }
 
@@ -99,10 +93,6 @@ const StyledWrapper = styled.div`
     font-size: 26px;
     color: rgba(0, 0, 0, 0.45);
   }
-
-  /* عند الضغط يتضائل الزر مؤقتاً */
-  .toggle input:active ~ .button { transform: scale(0.92); }
-
 
   .toggle input:checked ~ .button {
     filter: blur(0.5px);
