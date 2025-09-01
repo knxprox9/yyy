@@ -42,7 +42,7 @@ const StyledWrapper = styled.div`
   }
 
   .toggle input:checked~.label {
-    color: rgba(255,0,0,0.8);
+    color: rgba(0, 0, 0, 0.9);
   }
 
   .toggle .button {
