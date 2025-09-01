@@ -71,7 +71,9 @@ const StyledWrapper = styled.div`
     position: absolute;
     font-weight: 700;
     font-size: 28px;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     opacity: 0.9;
     height: 100%;
     width: 100%;
