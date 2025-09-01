@@ -10,6 +10,7 @@
   justify-content: center;
   min-height: 100vh;
   padding: 2rem;
+  margin-top: 1.25rem; /* move title and following elements slightly downward */
 }
 
 .app-title {
