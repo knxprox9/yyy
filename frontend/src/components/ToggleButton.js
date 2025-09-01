@@ -91,8 +91,8 @@ const StyledWrapper = styled.div`
   }
 
   .toggle input:active ~ .button {
-    filter: none;
-    box-shadow: none;
+    filter: blur(0.5px);
+    box-shadow: 0 12px 25px -4px rgba(0, 0, 0, 0.4), inset 0 -8px 30px 1px rgba(255, 255, 255, 0.9), 0 -10px 15px -1px rgba(255, 255, 255, 0.6), inset 0 8px 25px 0 rgba(0, 0, 0, 0.4), inset 0 0 10px 1px rgba(255, 255, 255, 0.6);
   }
 
   .toggle input:active ~ .label {
