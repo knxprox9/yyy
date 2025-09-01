@@ -105,8 +105,8 @@ const StyledWrapper = styled.div`
 
 
   .toggle input:checked ~ .button {
-    filter: blur(0.5px);
-    box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.4), inset 0 -8px 25px -1px rgba(255, 255, 255, 0.9), 0 -10px 15px -1px rgba(255, 255, 255, 0.6), inset 0 8px 20px 0 rgba(0, 0, 0, 0.2), inset 0 0 5px 1px rgba(255, 255, 255, 0.6);
+    filter: none;
+    box-shadow: none;
   }
 
   .toggle input:checked ~ .label {
