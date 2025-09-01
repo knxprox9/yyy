@@ -47,11 +47,11 @@ const StyledWrapper = styled.div`
 
   .toggle .button {
     transition: all 220ms cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: 0 8px 14px -4px rgba(0, 0, 0, 0.4), inset 0 -2px 3px -1px rgba(0, 0, 0, 0.2), 0 -6px 10px -1px rgba(255, 255, 255, 0.6), inset 0 2px 3px -1px rgba(255, 255, 255, 0.2);
+    box-shadow: none; /* remove any background/shadow circle */
     border-radius: 28px;
     position: absolute;
-    background: #ffffff;
-    border: 1px solid #e5e7eb;
+    background: transparent; /* no fill behind the icon */
+    border: none;
     margin-left: -20px;
     margin-top: -20px;
     display: block;
@@ -59,7 +59,7 @@ const StyledWrapper = styled.div`
     width: 40px;
     left: 50%;
     top: 50%;
-    transform: scale(1); /* بارز افتراضياً */
+    transform: scale(1);
   }
 
   .toggle .label {
